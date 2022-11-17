@@ -1,10 +1,12 @@
+import { Link } from "react-router-dom";
+
 function Navigation() {
   return (
     <ul>
-      <li>Portfolio</li>
-      <li>About Me</li>
-      <li>Contact</li>
-      <li>Resume</li>
+      <Link to="/">Portfolio</Link>
+      <Link to="/about">About Me</Link>
+      <Link to="/contact">Contact</Link>
+      <Link to="/resume">Resume</Link>
     </ul>
   );
 }
