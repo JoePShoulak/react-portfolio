@@ -1,22 +1,24 @@
 import * as React from "react";
 import Typography from "@mui/material/Typography";
-import { Link } from "react-router-dom";
+import { Link as RawLink } from "react-router-dom";
 
 function Navigation() {
+  function Link({ path, text }) {
+    return (
+      <Typography variant="h6" sx={{ flexGrow: 1 }}>
+        <RawLink to={path} style={{ color: "#ffffff", textDecoration: "none" }}>
+          {text}
+        </RawLink>
+      </Typography>
+    );
+  }
+
   return (
     <>
-      <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-        <Link to="/">Portfolio</Link>
-      </Typography>
-      <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-        <Link to="/about">About Me</Link>
-      </Typography>
-      <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-        <Link to="/contact">Contact</Link>
-      </Typography>
-      <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-        <Link to="/resume">Resume</Link>
-      </Typography>
+      <Link path="/" text="Portfolio" />
+      <Link path="/about" text="About Me" />
+      <Link path="/contact" text="Contact" />
+      <Link path="/resume" text="Resume" />
     </>
   );
 }
