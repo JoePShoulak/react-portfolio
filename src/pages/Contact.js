@@ -5,7 +5,7 @@ function Contact() {
     <Paper style={{ margin: "100px", padding: "25px" }}>
       <Type variant="h3">Contact</Type>
       <br />
-      <Type paragraph>You can contact me in many places</Type>
+      <Type paragraph>TODO: This should be a contact form.</Type>
     </Paper>
   );
 }

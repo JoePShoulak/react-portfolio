@@ -5,7 +5,10 @@ function Resume() {
     <Paper style={{ margin: "100px", padding: "25px" }}>
       <Type variant="h3">Resume</Type>
       <br />
-      <Type paragraph>I have a Resume</Type>
+      <Type paragraph>
+        TODO: This should contain a link to a downloadable resume, as well as a
+        list of my skills as a developer.
+      </Type>
     </Paper>
   );
 }

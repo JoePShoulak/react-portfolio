@@ -14,6 +14,7 @@ function AboutMe() {
         I've always been interested in math and programming, as well as
         education.
       </Type>
+      <Type paragraph>TODO: Expand on this, and add a profile picture.</Type>
     </Paper>
   );
 }

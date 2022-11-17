@@ -7,8 +7,8 @@ import Resume from "../pages/Resume";
 function Content() {
   return (
     <Routes>
-      <Route path="/" element={<Portfolio />} />
-      <Route path="/about" element={<AboutMe />} />
+      <Route path="/" element={<AboutMe />} />
+      <Route path="/portfolio" element={<Portfolio />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/resume" element={<Resume />} />
 

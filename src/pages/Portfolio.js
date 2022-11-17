@@ -5,7 +5,10 @@ function Portfolio() {
     <Paper style={{ margin: "100px", padding: "25px" }}>
       <Type variant="h3">Portfolio</Type>
       <br />
-      <Type paragraph>I have a Portfolio</Type>
+      <Type paragraph>
+        TODO: This should contain tiles elements that showcase projects I've
+        done.
+      </Type>
     </Paper>
   );
 }

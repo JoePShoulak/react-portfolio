@@ -15,8 +15,8 @@ function Navigation() {
 
   return (
     <>
-      <Link path="/" text="Portfolio" />
-      <Link path="/about" text="About Me" />
+      <Link path="/" text="About Me" />
+      <Link path="/portfolio" text="Portfolio" />
       <Link path="/contact" text="Contact" />
       <Link path="/resume" text="Resume" />
     </>
