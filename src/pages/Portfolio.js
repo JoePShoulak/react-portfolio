@@ -51,7 +51,7 @@ function Portfolio() {
         />
         <Project
           title="Weather App"
-          tags={["game development", "canvas"]}
+          tags={["apis", "asynchronous functions"]}
           repo="https://github.com/JoePShoulak/weatherapp"
           deploy="https://joepshoulak.github.io/weatherapp/"
           image="images/projects/weather-app.png"
