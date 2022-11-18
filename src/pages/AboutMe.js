@@ -8,7 +8,6 @@ function AboutMe() {
         src="images/me.png"
         width="150px"
         alt="profile picture of Joe P Shoulak"
-        duration="1000"
       />
       <br />
       <Type variant="h3">About Me</Type>

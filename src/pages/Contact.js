@@ -1,11 +1,5 @@
-import {
-  Button,
-  FormGroup,
-  Paper,
-  TextField,
-  Typography as Type,
-} from "@mui/material";
-import { Box, display } from "@mui/system";
+import { Button, Paper, TextField, Typography as Type } from "@mui/material";
+import { Box } from "@mui/system";
 import { useState } from "react";
 
 function Contact() {
@@ -45,7 +39,7 @@ function Contact() {
 
     if (val.length === 0) {
       setError({ ...error, email: errors.emailEmpty });
-    } else if (!val.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)) {
+    } else if (!val.match(/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/)) {
       setError({ ...error, email: errors.emailInvalid });
     } else {
       setEmail(val);

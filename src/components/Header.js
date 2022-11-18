@@ -10,7 +10,12 @@ export default function ButtonAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <Link path="/" text="Joe P. Shoulak" variant="h5"></Link>
+          <Link
+            path="/"
+            text="Joe P. Shoulak"
+            variant="h5"
+            neverActive={true}
+          ></Link>
           <Navigation />
         </Toolbar>
       </AppBar>
