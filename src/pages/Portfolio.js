@@ -6,10 +6,6 @@ function Portfolio() {
     <Paper style={{ margin: "100px", padding: "25px" }}>
       <Type variant="h3">Portfolio</Type>
       <br />
-      <Type paragraph>
-        TODO: This should contain tiles elements that showcase projects I've
-        done.
-      </Type>
       <Grid container spacing={2}>
         <Project
           title="Wave Function Collapse"
