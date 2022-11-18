@@ -44,7 +44,7 @@ function Portfolio() {
         />
         <Project
           title="Password Generator"
-          tags={["game development", "canvas"]}
+          tags={["javascript"]}
           repo="https://github.com/JoePShoulak/password-generator"
           deploy="https://joepshoulak.github.io/password-generator/"
           image="images/projects/password-generator.png"
