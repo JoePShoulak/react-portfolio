@@ -19,9 +19,11 @@ function AboutMe() {
       </Type>
       <Type paragraph>
         I've always been interested in math and programming, as well as
-        education.
+        education. After dabbling with technology for the majority of my life,
+        and after many difficulties on my own educational journey, I'm taking
+        this web development course to help prepare me to start creating a
+        YouTube presence so I can start giving back to the community.
       </Type>
-      <Type paragraph>TODO: Expand on this.</Type>
     </Paper>
   );
 }
