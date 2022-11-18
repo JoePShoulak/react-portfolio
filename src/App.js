@@ -5,7 +5,7 @@ import Header from "./components/Header";
 
 function App() {
   return (
-    <HashRouter>
+    <HashRouter basename="/">
       <Header />
       <Content />
       <Footer />
