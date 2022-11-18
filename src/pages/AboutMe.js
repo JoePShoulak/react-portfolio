@@ -1,8 +1,16 @@
 import { Paper, Typography as Type } from "@mui/material";
+import Image from "mui-image";
 
 function AboutMe() {
   return (
     <Paper style={{ margin: "100px", padding: "25px" }}>
+      <Image
+        src="images/me.png"
+        width="150px"
+        alt="profile picture of Joe P Shoulak"
+        duration="1000"
+      />
+      <br />
       <Type variant="h3">About Me</Type>
       <br />
       <Type paragraph>
@@ -14,7 +22,7 @@ function AboutMe() {
         I've always been interested in math and programming, as well as
         education.
       </Type>
-      <Type paragraph>TODO: Expand on this, and add a profile picture.</Type>
+      <Type paragraph>TODO: Expand on this.</Type>
     </Paper>
   );
 }
