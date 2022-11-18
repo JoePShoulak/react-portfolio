@@ -2,7 +2,10 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import Paper from "@mui/material/Paper";
-import { Typography } from "@mui/material";
+import { Grid, Icon, Typography } from "@mui/material";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import TwitterIcon from "@mui/icons-material/Twitter";
 
 export default function FixedBottomNavigation() {
   return (
@@ -14,6 +17,37 @@ export default function FixedBottomNavigation() {
         elevation={3}
       >
         <Typography align="center">Made by Joe P. Shoulak</Typography>
+        <Grid
+          container
+          spacing={0}
+          direction="column"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <Grid item xs={3}>
+            <a
+              href="https://github.com/JoePShoulak"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <GitHubIcon />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/joepshoulak/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <LinkedInIcon />
+            </a>
+            <a
+              href="https://twitter.com/JoePShoulak"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <TwitterIcon />
+            </a>
+          </Grid>
+        </Grid>
       </Paper>
     </Box>
   );
