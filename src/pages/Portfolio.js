@@ -15,6 +15,13 @@ function Portfolio() {
           image="images/projects/wfc.png"
         />
         <Project
+          title="Amplitude Analysis"
+          tags={["p5 canvas", "audio analysis"]}
+          repo="https://github.com/JoePShoulak/amplitude-analysis"
+          deploy="https://joepshoulak.github.io/amplitude-analysis/"
+          image="images/projects/amplitude-analysis.png"
+        />
+        <Project
           title="Tile Slide"
           tags={["game development", "canvas"]}
           repo="https://github.com/JoePShoulak/tile-slide"
