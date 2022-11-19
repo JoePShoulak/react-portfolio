@@ -21,9 +21,13 @@ function Resume() {
     };
   }, []);
 
-  const style = { margin: width > breakpoint ? "100px" : "0", padding: "25px" };
+  const paperStyle = {
+    margin: width > breakpoint ? "100px" : "0",
+    padding: "25px",
+  };
+  const cardStyle = width < breakpoint ? { width: "80vw", margin: "10px" } : {};
   return (
-    <Paper style={style}>
+    <Paper style={paperStyle}>
       <Type variant="h3">Resume</Type>
       <br />
       <Button download href="documents/Resume - Joe P Shoulak.pdf">
@@ -31,7 +35,7 @@ function Resume() {
       </Button>
       <Grid container spacing={2}>
         <Grid item lg={4} md={6} sm={12}>
-          <Card>
+          <Card style={cardStyle}>
             <CardContent>
               <Type variant="h4">Foundation</Type>
               <List>
@@ -49,7 +53,7 @@ function Resume() {
         </Grid>
 
         <Grid item lg={4} md={6} sm={12}>
-          <Card>
+          <Card style={cardStyle}>
             <CardContent>
               <Type variant="h4">Technical</Type>
               <List>
@@ -68,7 +72,7 @@ function Resume() {
         </Grid>
 
         <Grid item lg={4} md={6} sm={12}>
-          <Card>
+          <Card style={cardStyle}>
             <CardContent>
               <Type variant="h4">Performance</Type>
               <List>
