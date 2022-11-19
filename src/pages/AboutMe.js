@@ -1,9 +1,22 @@
 import { Paper, Typography as Type } from "@mui/material";
 import Image from "mui-image";
+import { useEffect, useState } from "react";
 
 function AboutMe() {
+  const [width, setWidth] = useState(window.innerWidth);
+  const breakpoint = 700;
+  useEffect(() => {
+    const handleResizeWindow = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResizeWindow);
+    return () => {
+      window.removeEventListener("resize", handleResizeWindow);
+    };
+  }, []);
+
+  const style = { margin: width > breakpoint ? "100px" : "0", padding: "25px" };
+
   return (
-    <Paper style={{ margin: "100px", padding: "25px" }}>
+    <Paper style={style} width="fluid">
       <Image
         src="images/me.png"
         width="150px"

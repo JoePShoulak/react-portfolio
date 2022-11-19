@@ -1,9 +1,22 @@
 import { Grid, Paper, Typography as Type } from "@mui/material";
+import { useEffect, useState } from "react";
 import Project from "../components/Project";
 
 function Portfolio() {
+  const [width, setWidth] = useState(window.innerWidth);
+  const breakpoint = 700;
+  useEffect(() => {
+    const handleResizeWindow = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResizeWindow);
+    return () => {
+      window.removeEventListener("resize", handleResizeWindow);
+    };
+  }, []);
+
+  const style = { margin: width > breakpoint ? "100px" : "0", padding: "25px" };
+
   return (
-    <Paper style={{ margin: "100px", padding: "25px" }}>
+    <Paper style={style}>
       <Type variant="h3">Portfolio</Type>
       <br />
       <Grid container spacing={2}>

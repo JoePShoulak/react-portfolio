@@ -8,10 +8,22 @@ import {
   Paper,
   Typography as Type,
 } from "@mui/material";
+import { useEffect, useState } from "react";
 
 function Resume() {
+  const [width, setWidth] = useState(window.innerWidth);
+  const breakpoint = 700;
+  useEffect(() => {
+    const handleResizeWindow = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResizeWindow);
+    return () => {
+      window.removeEventListener("resize", handleResizeWindow);
+    };
+  }, []);
+
+  const style = { margin: width > breakpoint ? "100px" : "0", padding: "25px" };
   return (
-    <Paper style={{ margin: "100px", padding: "25px" }}>
+    <Paper style={style}>
       <Type variant="h3">Resume</Type>
       <br />
       <Button download href="documents/Resume - Joe P Shoulak.pdf">

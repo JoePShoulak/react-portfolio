@@ -1,6 +1,6 @@
 import { Button, Paper, TextField, Typography as Type } from "@mui/material";
 import { Box } from "@mui/system";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Contact() {
   const [name, setName] = useState("");
@@ -74,8 +74,20 @@ function Contact() {
     return Object.values(error)[0];
   };
 
+  const [width, setWidth] = useState(window.innerWidth);
+  const breakpoint = 700;
+  useEffect(() => {
+    const handleResizeWindow = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResizeWindow);
+    return () => {
+      window.removeEventListener("resize", handleResizeWindow);
+    };
+  }, []);
+
+  const style = { margin: width > breakpoint ? "100px" : "0", padding: "25px" };
+
   return (
-    <Paper style={{ margin: "100px", padding: "25px" }}>
+    <Paper style={style}>
       <Type variant="h3">Contact</Type>
       <br />
       <Box
@@ -84,8 +96,7 @@ function Contact() {
           "& .MuiTextField-root": { m: 1, width: "25ch" },
         }}
         noValidate
-        autoComplete="off"
-      >
+        autoComplete="off">
         <div>
           <TextField
             id="name"
