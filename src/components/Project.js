@@ -27,7 +27,7 @@ function Project(props) {
   useEffect(() => {
     const fetchData = async (repo) => {
       const octokit = new Octokit({
-        auth: process.env.REACT_APP_GITHUB_TOKEN,
+        auth: "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",
       });
 
       const { data } = await octokit.request("GET /repos/{owner}/{repo}", {
