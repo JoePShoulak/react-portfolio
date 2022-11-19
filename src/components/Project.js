@@ -25,19 +25,17 @@ function Project(props) {
   const [description, setDescription] = useState("");
 
   useEffect(() => {
-    const fetchData = async () => {
-      const octokit = new Octokit({
-        auth: process.env.REACT_APP_GITHUB_TOKEN,
-      });
-
-      const { data } = await octokit.request("GET /repos/{owner}/{repo}", {
-        owner: "joepshoulak",
-        repo: props.repo,
-      });
-
-      setDescription(data.description);
-    };
-    fetchData(props.repo);
+    // const fetchData = async () => {
+    //   const octokit = new Octokit({
+    //     auth: process.env.REACT_APP_GITHUB_TOKEN,
+    //   });
+    //   const { data } = await octokit.request("GET /repos/{owner}/{repo}", {
+    //     owner: "joepshoulak",
+    //     repo: props.repo,
+    //   });
+    //   setDescription(data.description);
+    // };
+    // fetchData(props.repo);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
