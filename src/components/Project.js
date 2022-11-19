@@ -19,6 +19,9 @@ function joinWithGrammer(array) {
 }
 
 function Project(props) {
+  const repo = `https://github.com/JoePShoulak/${props.repo}`;
+  const deploy = `https://joepshoulak.github.io/${props.repo}`;
+
   return (
     <Grid item lg={3} md={4} xs={12}>
       <Card sx={{ maxWidth: 345 }}>
@@ -37,10 +40,10 @@ function Project(props) {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small" href={props.repo} target="_blank">
+          <Button size="small" href={repo} target="_blank">
             GitHub
           </Button>
-          <Button size="small" href={props.deploy} target="_blank">
+          <Button size="small" href={deploy} target="_blank">
             View Project
           </Button>
         </CardActions>
