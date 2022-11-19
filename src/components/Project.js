@@ -5,9 +5,9 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Grid } from "@mui/material";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
+// import { Octokit } from "octokit";
 
-import { Octokit } from "octokit";
 function joinWithGrammer(array) {
   if (array.length === 1) return array[0];
 
@@ -22,22 +22,21 @@ function joinWithGrammer(array) {
 function Project(props) {
   const repo = `https://github.com/JoePShoulak/${props.repo}`;
   const deploy = `https://joepshoulak.github.io/${props.repo}`;
-  const [description, setDescription] = useState("");
+  // const [description, setDescription] = useState("");
 
-  useEffect(() => {
-    // const fetchData = async () => {
-    //   const octokit = new Octokit({
-    //     auth: process.env.REACT_APP_GITHUB_TOKEN,
-    //   });
-    //   const { data } = await octokit.request("GET /repos/{owner}/{repo}", {
-    //     owner: "joepshoulak",
-    //     repo: props.repo,
-    //   });
-    //   setDescription(data.description);
-    // };
-    // fetchData(props.repo);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const octokit = new Octokit({
+  //       auth: process.env.REACT_APP_GITHUB_TOKEN,
+  //     });
+  //     const { data } = await octokit.request("GET /repos/{owner}/{repo}", {
+  //       owner: "joepshoulak",
+  //       repo: props.repo,
+  //     });
+  //     setDescription(data.description);
+  //   };
+  //   fetchData();
+  // }, []);
 
   return (
     <Grid item lg={3} md={4} xs={12}>
