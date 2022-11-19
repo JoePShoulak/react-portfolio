@@ -1,4 +1,3 @@
-import * as React from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -6,21 +5,40 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Grid } from "@mui/material";
+import { useState, useEffect } from "react";
 
-function joinWithGrammer(array) {
-  if (array.length === 1) return array[0];
+import { Octokit } from "octokit";
+// function joinWithGrammer(array) {
+//   if (array.length === 1) return array[0];
 
-  const copy = [...array];
-  const last = copy.pop();
+//   const copy = [...array];
+//   const last = copy.pop();
 
-  if (copy.length === 1) return `${copy[0]} and ${last}`;
+//   if (copy.length === 1) return `${copy[0]} and ${last}`;
 
-  return copy.join(", ") + `, and ${last}`;
-}
+//   return copy.join(", ") + `, and ${last}`;
+// }
 
 function Project(props) {
   const repo = `https://github.com/JoePShoulak/${props.repo}`;
   const deploy = `https://joepshoulak.github.io/${props.repo}`;
+  const [description, setDescription] = useState("");
+
+  useEffect(() => {
+    const fetchData = async (repo) => {
+      const octokit = new Octokit({
+        auth: process.env.REACT_APP_GITHUB_TOKEN,
+      });
+
+      const { data } = await octokit.request("GET /repos/{owner}/{repo}", {
+        owner: "joepshoulak",
+        repo: props.repo,
+      });
+
+      setDescription(data.description);
+    };
+    fetchData(props.repo);
+  }, []);
 
   return (
     <Grid item lg={3} md={4} xs={12}>
@@ -36,7 +54,7 @@ function Project(props) {
             {props.title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            This project demonstrates the use of {joinWithGrammer(props.tags)}.
+            {description}
           </Typography>
         </CardContent>
         <CardActions>
