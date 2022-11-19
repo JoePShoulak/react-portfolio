@@ -9,7 +9,7 @@ function Portfolio() {
       <Grid container spacing={2}>
         <Project
           title="Wave Function Collapse"
-          tags={["algorithms"]}
+          tags={["p5 canvas", "algorithms"]}
           repo="https://github.com/JoePShoulak/wave-function-collapse"
           deploy="http://wavefunctioncollapse.io/"
           image="images/projects/wfc.png"
