@@ -48,7 +48,7 @@ function AboutMe() {
             </Link>
           </ListItem>
         </List>
-        For the latter (which is mainly a reworking and expansion of the first)
+        For the latter (which is mainly a reworking and expansion of the former)
         I received the Meritorious Performance Award from Minnesota Scholars of
         Distinction in Mathematics. I haven't continued my work as much as I
         would have liked, but I definitely haven't completely set it aside
