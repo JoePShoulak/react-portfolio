@@ -8,16 +8,16 @@ import { Grid } from "@mui/material";
 import { useState, useEffect } from "react";
 
 import { Octokit } from "octokit";
-// function joinWithGrammer(array) {
-//   if (array.length === 1) return array[0];
+function joinWithGrammer(array) {
+  if (array.length === 1) return array[0];
 
-//   const copy = [...array];
-//   const last = copy.pop();
+  const copy = [...array];
+  const last = copy.pop();
 
-//   if (copy.length === 1) return `${copy[0]} and ${last}`;
+  if (copy.length === 1) return `${copy[0]} and ${last}`;
 
-//   return copy.join(", ") + `, and ${last}`;
-// }
+  return copy.join(", ") + `, and ${last}`;
+}
 
 function Project(props) {
   const repo = `https://github.com/JoePShoulak/${props.repo}`;
@@ -55,7 +55,7 @@ function Project(props) {
             {props.title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {description}
+            This project demonstrates the use of {joinWithGrammer(props.tags)}.
           </Typography>
         </CardContent>
         <CardActions>
