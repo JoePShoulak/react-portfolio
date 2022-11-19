@@ -29,6 +29,13 @@ function Portfolio() {
           image="images/projects/fft.png"
         />
         <Project
+          title="Fireworks"
+          tags={["p5 canvas"]}
+          repo="https://github.com/JoePShoulak/p5-fireworks"
+          deploy="https://joepshoulak.github.io/p5-fireworks/"
+          image="images/projects/fireworks.png"
+        />
+        <Project
           title="Tile Slide"
           tags={["game development", "canvas"]}
           repo="https://github.com/JoePShoulak/tile-slide"
