@@ -61,7 +61,7 @@ function AboutMe() {
         to involve a lot of math, so who's so say what's what anymore?
       </Type>
       <Type paragraph>
-        I have a passion for education, having been an amaetuer tutor throughout
+        I have a passion for education, having been an amatuer tutor throughout
         high school and a professional tutor until I opened my own Mathnasium
         franchise. As important as I find professional education services, the
         majority of what I've learned has come from the incredible community of
