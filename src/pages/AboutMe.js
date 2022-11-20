@@ -63,7 +63,7 @@ function AboutMe() {
       <Type paragraph>
         I have a passion for education, having been an amaetuer tutor throughout
         high school and a professional tutor until I opened my own Mathnasium
-        franchice. As important as I find professional education services, the
+        franchise. As important as I find professional education services, the
         majority of what I've learned has come from the incredible community of
         free content producers who make these incredible technologies
         accessible. Because of that, I'm hoping to become one of those content
