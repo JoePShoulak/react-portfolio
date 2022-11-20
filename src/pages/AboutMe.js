@@ -57,7 +57,7 @@ function AboutMe() {
       <Type paragraph>
         I continued back and forth between mathematics and programming, because
         they both scratch the same itch: solving a given problem. These days I
-        tend to focus on programming, but the programming I end of doing tends
+        tend to focus on programming, but the programming I end up doing tends
         to involve a lot of math, so who's so say what's what anymore?
       </Type>
       <Type paragraph>
