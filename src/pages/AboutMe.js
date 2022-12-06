@@ -70,7 +70,7 @@ function AboutMe() {
         creators myself.
       </Type>
       <Type paragraph>
-        Most recently, I have almost completed the University of Minesota Web
+        Most recently, I just completed the University of Minesota Web
         Development Boot Camp, which comprehensively teaches modern Full-Stack
         Development, focusing on the MERN Stack. It's been an incredible journey
         that helped me fill in some of the gaps in my self-education, as well as
